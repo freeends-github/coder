@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/coder.css">
+
+    <link rel="stylesheet" href="./coder.css">
+    <link rel="stylesheet" href="./script.js">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <header> <img src="/Index/Group 205.png" alt="">
+    <header> <img src="./Index/Group 205.png" alt="">
     <ul class="HList">
 <li > <a class="AboutMe"  href="#">About Me</a></li>
-<li><a href="#">Servicessssss</a></li>
+<li><a href="#">Services</a></li>
 <li><a href="#">Portfolio</a></li>
 <li><a href="#">Testiomonials</a></li> 
 <li><a href="#">Blog</a></li> 
@@ -25,7 +27,7 @@
  <div>
     Hello,I am
  </div>
- <img class="img1" src="/Index/Polygon 1.png" alt="">
+ <img class="img1" src="./Index/Polygon 1.png" alt="">
  <h1>Mr.JOHN WEARY</h1>
  <br><br>
  <p>A Professional Web Developer and UI/UX Designer.</p>
@@ -34,20 +36,27 @@
 Download Cv
 </a>
  <span>My Work</span>
- <a href="#section2">
- <img class="img2" src="/Index/arrow-long.png" alt="">
-<img class="img3" src="/Index/Rectangle 131.png" alt="">
+ <a class="scrollBtn"> 
+     <script> let scrollBtn = document.querySelector(".scrollBtn");
+        scrollBtn.addEventListener("click", () => {
+            // addEventListener osht ni metod e objektit qe na kthehet kur selektojna ni element,
+            window.scrollBy(0, 800);
+        });</script>
+ <img class="img2" src="./Index/arrow-long.png" alt="">
+    <img class="img3" src="./Index/Rectangle 131.png" alt="">
 </a>
  </section>
  <section class="section2">
     <div id="section2"><a href=""></a></div>
-<img  src="/Index/shutterstock_407505481.png" alt="">
+<img  src="./Index/shutterstock_407505481.png" alt="">
 <div class="text2">
 <h3>Read About My Life Struggle Story!</h3>
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p>
 <h6>WORDPRESS 80%</h6>
-<div ><div class="Wordpress"></div></div>
-<h6 class="html%">HTML 75%</h6>
+<div ><div id="html%" class="Wordpress"></div></div>
+<h6 >HTML 75%</h6>
+<script>
+       </script>
 <div ><div class="HTML"></div></div>
 <h6>PHP 85%</h6>
 <div ><div class="PHP"></div></div>
@@ -57,26 +66,204 @@ Download Cv
 <a class="Aboutme" href="#">About Me</a>
 </div>
 <div class="experience">
-    <img class="vijat" src="/Index/Group 34854.png" alt="">
+    <img class="vijat" src="./Index/Group 34854.png" alt="">
     <h4><span>06</span><br> Years of Experience</h4>
 </div>
  </section>
  <section class="section3">
      <div class="OurServices">
-         <img class="line" src="/Index/Line 37.png" alt="">
+         <img class="line" src="./Index/Line 37.png" alt="">
          <h2>Our Services</h2>
          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p>
          <div>
-             <a href="#">Wordpress <img class="arrow" src="/Index/arrow-long1.png" alt=""></a>
-             <a href="#"> HTML <img src="/Index/arrow-long1.png" class="arrow" alt=""></a>
-             <a href="#">Web Developement <img class="arrow" src="/Index/arrow-long1.png" alt=""> </a>
+             <a href="#"><img class="logo" src="./Index/Group 34848.png" alt=""> <span>Wordpress</span>  <img class="arrow" src="./Index/arrow-long1.png" alt=""></a>
+             <a href="#"><img class="logo" src="./Index/Group 34846.png" alt=""> <span>HTML</span> <img src="./Index/arrow-long1.png" class="arrow" alt=""></a>
+             <a href="#"> <img class="logo" src="./Index/Group 34850.png" alt=""><span>Web Developement</span> <img class="arrow" src="./Index/arrow-long1.png" alt=""> </a>
          </div>
          <div>
-             <a href="#">CSS <img class="arrow" src="/Index/arrow-long1.png" alt=""> </a>
-             <a href="#">PHP <img class="arrow" src="/Index/arrow-long1.png" alt=""></a>
-             <a href="#">Problem Solving <img class="arrow" src="/Index/arrow-long1.png" alt=""></a>
+             <a href="#"><img class="logo" src="./Index/Group 34851.png" alt=""> <span>CSS</span> <img class="arrow" src="./Index/arrow-long1.png" alt=""> </a>
+             <a href="#"><img class="logo" src="./Index/Group 34852.png" alt=""><span>PHP</span> <img class="arrow" src="./Index/arrow-long1.png" alt=""></a>
+             <a href="#"><img class="logo" src="./Index/Group 34853.png" alt=""> <span>Problem Solving</span> <img class="arrow" src="./Index/arrow-long1.png" alt=""></a>
          </div>
+         <div id="more">
+             <a href="#"><img class="logo" src="./Index/Group 34851.png" alt=""><span>JS</span> <img class="arrow" src="./Index/arrow-long1.png" alt=""></a>
+             <a href="#"><img class="logo" src="./Index/Group 34851.png" alt=""><span>BS</span><img class="arrow" src="./Index/arrow-long1.png" alt=""></a>
+         </div>
+         <button onclick="read()" id="read" class="ViewAll">Show More</button>
+         <script>
+         var i=0;
+         function read(){
+             if(!i){
+                 document.getElementById("more").style.display="inline";
+                 document.getElementById("read").innerHTML="Show Less";
+                 i=1;
+             }
+             else{
+                 document.getElementById("more").style.display="none";
+                 document.getElementById("read").innerHTML="View All";
+                 i=0;
+             }
+         }
+         </script>
      </div>
  </section>
+ <section class="section4">
+     <div class="background"></div>
+     <div class="text">
+         <h2><span>50+</span>Clients</h2>
+         <h2><span>68</span>Projects</h2>
+         <h2><span>30</span>Awards</h2>
+         <h2><span>06</span>Years Experience</h2>
+     </div>
+ </section>
+ <section class="section5">
+    <div class="OurServices">
+        <img class="line" src="./Index/Line 37.png" alt="">
+        <h2>Our Portfolio</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div>
+<ul>
+    <li id="all">ALL</li>
+    <li id="webdevelopment">Web development</li>
+    <li id="html">HTML</li>
+    <li id="UI/UX">UI/UX</li>
+    <li id="webdesign">Web Design</li>
+</ul>
+<div class="foto"><div class="Text5"><h5>Application Development </h5> 
+    <h6> HTML, CSS, jQuery</h6>
+    <p>Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
+    <img src="./Index/Path 116.png" alt=""></div></div>
+<div class="foto"><div class="Text5"><h5>Application Development </h5> 
+    <h6> HTML, CSS, jQuery</h6>
+    <p>Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
+    <img src="./Index/Path 116.png" alt=""></div></div>
+<div class="foto" id="foto1"><div class="Text5"><h5>Application Development </h5> 
+    <h6> HTML, CSS, jQuery</h6>
+    <p>Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
+    <img src="./Index/Path 116.png" alt=""></div></div>
+<div class="foto" id="foto2"><div class="Text5"><h5>Application Development </h5> 
+    <h6> HTML, CSS, jQuery</h6>
+    <p>Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
+    <img src="./Index/Path 116.png" alt=""></div></div>
+<div class="foto" id="foto1"><div class="Text5"><h5>Application Development </h5> 
+    <h6> HTML, CSS, jQuery</h6>
+    <p>Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
+    <img src="./Index/Path 116.png" alt=""></div></div>
+<div class="foto" id="foto2">
+    <div class="Text5"><h5>Application Development </h5> 
+    <h6> HTML, CSS, jQuery</h6>
+    <p>Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
+    <img src="./Index/Path 116.png" alt=""></div></div>
+
+<!-- <script>
+    var i=0;
+    function read(){
+        if(!i){
+            document.getElementById("all").style.display="inline";
+            document.getElementById("read").innerCSS="color:#ffffff";
+            i=1;
+        }
+        else{
+            document.getElementById("more").style.display="none";
+            document.getElementById("read").innerHTML="View All";
+            i=0;
+        }
+    }
+    </script> -->
+ </section>
+ <section class="section6">
+    <div class="OurServices">
+        <img class="line" src="./Index/Line 37.png" alt="">
+        <h2>Testimonials</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div>
+            <div class="text81">
+                <img class="img6" src="./Index/Mask Group 1.png" alt="">
+                <h4>John Doe</h4>
+                <h5>CEO Abc Company</h5>
+                <img class="img61" src="./Index/asset1.png" alt="">
+                <p><span></span> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. <span></span></p>
+                <img class="img62" src="./Index/asset1.png" alt="">
+            </div>
+ </section>
+ <section class="section7">
+     <img src="./Index/shutterstock_672470545.png" alt="">
+     <div>
+     <h6>Have any Project in Mind?</h6>
+     <h3>I'm Available for Freelancing</h3>
+     <button>Hire Me!</button>
+     </div>
+ </section>
+ <section class="section8">
+    <div class="OurServices">
+        <img class="line" src="./Index/Line 37.png" alt="">
+        <h2>Latest Blog</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p></div>
+        <div class="fotot">
+        <div class="text8">
+                <img class="img8" src="./Index/post-2.png" alt="">
+               <h5>26th October,2019</h5>
+                <h3>I Used The Web For A Day On A 50 MB Budget</h3>
+            <h6>Learn More <img src="./Index/Path 116.png" alt=""></h6>
+            </div>
+            <div class="text8">
+                <img class="img8" src="./Index/post-2.png" alt="">
+               <h5>26th October,2019</h5>
+                <h3>I Used The Web For A Day On A 50 MB Budget</h3>
+            <h6>Learn More <img src="./Index/Path 116.png" alt=""></h6>
+            </div>
+            <div class="text8">
+                <img class="img8" src="./Index/post-2.png" alt="">
+                    <h5>26th October,2019</h5>
+                <h3>I Used The Web For A Day On A 50 MB Budget</h3>
+            <h6>Learn More <img src="./Index/Path 116.png" alt=""></h6>
+        
+            </div>
+        </div>
+ </section>
+ <footer>
+     <div id="ContactUs">
+<div class="ContactUs">
+    <h2>Contact Us</h2>
+    <p>Let's make something new,different and more meaningful or make thing more visual or conceptual?</p>
+      <div>
+          <img src="./Index/phone.png" alt="">
+          <h6>Call Me</h6>
+          <h3>+123 456 7890</h3>
+      </div>
+      <div>
+          <img src="./Index/email-line.png" alt="">
+          <h6>Email</h6>
+          <h3>info@coder.com</h3>
+      </div>
+      <div>
+        <img src="./Index/location-3.png" alt="">
+          <h6>Address</h6>
+         <h3>27 Division St, New York, NY 10002, USA</h3>
+      </div>
+    
+</div>
+<h4>Find Me On</h4>
+      <div class="findmeon">
+          <img src="./Index/behance.png" alt="">
+          <img src="./Index/dribbble.png" alt="">
+<img src="./Index/insta.png" alt="">
+<img src="./Index/linked in.png" alt="">
+<img src="./Index/pinterest.png" alt="">
+        </div>
+     </div>
+<div class="Drop_a_Line">
+    <h2>Drop a Line</h2>
+    <input  type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input class="input1" type="text">
+    <button>Submit</button>
+</div>
+<div>
+
+</div>
+ </footer>
 </body>
 </html>

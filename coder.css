@@ -6,7 +6,13 @@
 }
 
 
-
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+.scrollBtn {
+    cursor: pointer;
+}
 header img{
     height: 70px;
     width: 150px;
@@ -43,7 +49,7 @@ header .HList :hover,:focus
     background-color: #ff4900;
 }
 .section1{
-    background-image: url("/Index/Untitled1.png");
+    background-image: url("./Index/Untitled1.png");
     height: 435px;
     background-size: cover;
     background-repeat:no-repeat ;
@@ -151,11 +157,12 @@ margin: 20px 0;
 
  }
 .section2 .text2 div div{
-    background-color: #ff4900;
     height: 4.5px;
 }
 .section2 .text2 div .Wordpress{
     width: 80%;
+    transition: width 500ms ease-in-out;
+    background-color: #ff4900;
 } 
 .section2 .text2 div .HTML{
     width: 75%;
@@ -170,22 +177,6 @@ margin: 20px 0;
     background-color: #ffbf0f;
     margin-bottom:100px;
 }
-/* @keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-30%);
-    }
-    30% {
-      transform: translateX(0);
-    }
-  }
-  .section2 .text2 div .Wordpress{
-    animation: 5s ease-out 0s 1 slideInFromLeft;
-    background-color: #ff4900;
-    height: 4.5px;
-    width: 80%;
-    overflow: hidden;
-
-  } */
 
 .section2 .text2 .Hireme{
 font-size: 15px;
@@ -237,20 +228,20 @@ margin-left: 25px;
     background: transparent;
     font-size: 25px;
 }
-.section3 .OurServices{
+ .OurServices{
     margin:150px 200px;
     color: white;
 }
-.section3 .line{
+ .line{
     height: 70px;
    margin-left: 480px;
 }
-.section3 .OurServices h2{
+.OurServices h2{
     font-weight: bold;
     font-size: 35px;
     text-align: center;
 }
-.section3 .OurServices p{
+ .OurServices p{
     font-size: 12px;
     line-height: 25px;
     padding: 20px 100px;
@@ -265,17 +256,367 @@ margin-left: 25px;
     width: 265px;
     margin-right: 25px;
     padding: 10px;
+   
     border-radius: 3px;
     margin-bottom: 25px;
+}
+.section3 .OurServices a span{
+   position: absolute;
+   background: transparent;
+   margin-top: 20px;
+   margin-left: 10px;
 }
 .section3 .OurServices a .arrow{
     background: transparent;
     width: 30px;
     float: right;
-    margin-top: 5px;
+    margin-top: 25px;
 }
 .section3 .OurServices a .Logo{
     width: 25px;
     height: 25px;
     background: transparent;
+}
+.section3 .logo{
+    width: 25px;
+    height: 25px;
+    background: url("./Index/Ellipse\ 25.png");
+    background-size: contain ;
+    padding: 15px;
+}
+.section3 .ViewAll{
+    width:165px;
+    margin-left: 400px;
+    padding: 20px 45px;
+    color: white;
+    border-radius: 5px;
+    background-color: #ff4900;
+    margin-bottom :20px; ;
+border: none;
+}
+#more{
+    display: none;
+}
+.section4 .background{
+    background-image: url( "./Index/shutterstock_696061426.png");
+    height: 450px;
+    opacity: 0.1;
+    margin-bottom: 0;
+}
+.section4 .text{
+    position: absolute;
+    background: transparent;
+    color: white;
+    margin: 0 150px;
+margin-top: -280px;
+
+}
+.section4 .text h2 {
+    background: transparent;
+    color: white;
+    display:inline-block ;
+    margin-left: 25px;
+    background: #111111;
+    height: 110px;
+    width: 220px;
+    font-size: 20px;
+    text-align: center;
+  border: 0.3px dashed  #707070;
+  border-width: 2.5px;
+  border-radius :10px; 
+  padding-top: 40px;
+}
+.section4 .text h2 span{
+    background: transparent;
+    font-size: 35px;
+    display: flex;
+    margin-left: 84px;
+    font-weight: 900;
+}
+.section4 .text h2:hover{
+    background: #ff4900;
+    border-color: #ff4900;
+}
+.section5 ul{
+    margin-left: 280px;
+}
+.section5 ul li{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 20px;
+    padding: 5px;
+}
+.section5 .foto{
+    height: 300px;
+    width: 270px;
+margin-left: 20px;
+margin-top: 20px;
+ display: inline-block;
+ background:url("./Index/1.png");
+ border-radius: 10px;
+
+}
+#foto1{
+    background: url("./Index/3b8036b8a3b3e4e8692f3a79e549efc7.png");
+}
+#foto2{
+    background: url("./Index/dribbble_attachment.png");
+}
+.section5 .foto p{
+    background: transparent;
+    padding: 0;
+    padding-top: 25px;
+
+}
+.section5 .foto h5{
+    background: transparent;
+    padding-top: 50px;
+
+
+}
+.section5 .foto h6{
+    background: transparent;
+    font-size: 10px;
+
+}
+.section5 .foto img{
+    background: transparent;
+    padding-top: 0px;
+
+}
+.section5 #all{
+    border-bottom: #ff4900 solid 2px;
+    color: #ff4900;
+}
+.section5 .foto div{
+    background-color: rgba(255, 73, 0, 0.9);
+    height: 300px;
+    width: 270px;
+    padding: 0;
+    text-align: center;
+ display: none;
+ position: absolute;
+ border-radius: 10px;
+ 
+}
+.section5 .foto:hover .Text5 {
+   display: inline-block;
+}
+
+.section7 img{
+    height: 380px;
+    width: 100%;
+    opacity: 0.15;
+}
+.section7 div{
+    margin-top: -250px;
+    color: white;
+    text-align: center;
+}
+.section7 div h6{
+
+    font-size :15px ;
+    margin-bottom: 15px;
+
+}
+.section7 div h3{
+    font-size: 25px;
+    margin-bottom: 35px;
+    font-weight: bolder;
+}
+.section7 div button{
+    padding: 20px 45px;
+    border-radius: 5px;
+    margin-bottom :20px; 
+border: none;
+opacity: 1;
+color: white;
+cursor: pointer;
+background: #ff4900;
+}
+.section8 .fotot{
+   margin-left: 200px;
+   margin-top: -100px;
+}
+.section8 .text8{
+    display: inline-block;
+   width: 273px;
+   margin-right: 40px;
+   background: rgba(17, 17, 17, 1);
+   color: white;
+   padding: 10px;
+   
+   
+}
+.section8 .text8 h3{
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 0;
+
+}
+.section8 .text8 h5{
+    background: transparent;
+
+}
+.section8 .text8 h6{
+    background: transparent;
+    padding-bottom: 10px;
+
+}
+.section8 .text8 h6 img{
+    background: transparent;
+width: 20px;
+height: 10px;
+padding-top:3px ;
+position: absolute;
+padding-left: 5px;
+}
+.section8 .text8 .img8{
+    width: 293px;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+.section6  .text81{
+    
+    color: white;
+    display: inline-block;
+    background: rgba(17, 17, 17, 1);
+    text-align: center;
+    margin-top: 70px;
+}                                                                                                              .section6 .img6{
+    background:transparent;
+    height: 120px;
+    width: 120px;
+    margin-top: -60px;
+}    
+.section6 h4{
+    background: transparent;
+    color: #ff4900;
+}
+.section6 h5{
+   background: transparent;
+}
+.section6 p{
+    background: transparent;
+    margin-bottom: 30px;
+}
+.section6 .img61{
+    background: transparent;
+    position: absolute;
+    margin-left: -390px;
+    margin-top: -20px;
+    width: 15px;
+    height: 60px;
+}
+.section6 .img62{
+    background: transparent;
+    position: absolute;
+    margin-left:320px ;
+    margin-top: -100px;
+    width: 15px;
+    height: 60px;
+}
+footer{
+    background:rgba(6, 6, 6, 1);
+    margin-top: 50px;
+}
+footer #ContactUs{
+    display: inline-block;
+    background: transparent;
+}
+footer .ContactUs
+{
+    color: white;
+    margin-left: 200px;
+    width: 450px;
+    display: inline-block;
+    margin-top: 80px;
+    background: transparent;
+}
+footer .ContactUs h2{
+    font-weight: bolder;
+    margin-bottom: 20px;
+    background: transparent;
+}
+footer .ContactUs p{
+    font-size: 12px;
+    background: transparent;
+}
+footer .ContactUs div{
+    margin: 30px 0;
+    width: 300px;
+    margin-left: 30px;
+    background: transparent;
+
+}
+footer .ContactUs div h6{
+    color: rgba(107, 107, 107, 1);
+    background: transparent;
+}
+footer .ContactUs div h3{
+    background: transparent;
+    font-size: 15px;
+}
+footer .ContactUs div img{
+    display: inline-block;
+   position: absolute;
+   margin-left: -30px;
+   margin-top: 5px;
+   background: transparent;
+}
+footer  .findmeon{
+    background: #ff4900;
+    height: 40px;
+    width: 410px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px;
+}
+footer h4{
+    background:rgba(6, 6, 6, 1);
+    color: white;
+    margin-left: 250px;
+    margin-bottom: 10px;
+}
+footer  .findmeon img{
+    height: 25px;
+    width:25px;
+background:transparent;
+float: right;
+padding:8px;
+}
+footer .Drop_a_Line{
+    display: inline-block;
+    position: absolute;
+    background: transparent;
+    color: white;
+    margin-top:70px ;
+    margin-left: 20px;
+}
+footer .Drop_a_Line h2{
+    background: transparent;
+}
+footer .Drop_a_Line input{
+    background: #000;
+    border:rgba(51,51,51,1);
+    width:250px;
+    height: 60px;
+    margin-top: 20px;
+    margin-right: 10px;
+    color: white;
+}
+footer .Drop_a_Line .input1{
+    height: 120px;
+    width: 510px;
+}
+footer .Drop_a_Line button{
+    display: block;
+    padding: 12px 25px;
+    background: #ff4900;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
 }
